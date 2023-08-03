@@ -1,0 +1,34 @@
+{
+  "name": "vader-second",
+  "type": "module",
+  "version": "1.0.5",
+  "description": "",
+  "packageManager": "pnpm@8.4.0",
+  "exports": {
+    ".": {
+      "types": {
+        "default": "./dist/index.d.ts"
+      },
+      "default": {
+        "import": "./dist/index.mjs",
+        "require": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npx unbuild",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "pnpm  build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "unbuild": "^1.2.1"
+  }
+}
